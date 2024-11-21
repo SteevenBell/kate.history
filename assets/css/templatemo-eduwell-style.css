@@ -774,7 +774,7 @@ header
 
 /* Стили для эффекта при наведении, если нужно */
 .logo:hover .text-logo {
-  color: #0088cc;
+  color: #ffffff;
   /* Замените на нужный цвет при наведении */
 }
 
@@ -1004,11 +1004,15 @@ section.our-courses ul.nacc li .left-image {
   margin-right: 50px;
   top: 50%;
   transform: translateY(-50%);
+  width: 70%; /* Устанавливаем ширину на 90% */
 }
 
 section.our-courses ul.nacc li .left-image img {
+  width: 50%;  /*Заставляет изображение занимать всю ширину родительского блока */
+  height: auto;  /*Сохраняет пропорции изображения */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  object-fit: cover; /* Обеспечивает, чтобы изображение заполнило блок, обрезая лишние части */
 }
 
 section.our-courses ul.nacc li .left-image .price h6 {
@@ -1095,7 +1099,9 @@ section.simple-cta {
 }
 
 section.simple-cta .left-image {
+  
   margin-right: 45px;
+
 }
 
 section.simple-cta h6 {
@@ -1320,6 +1326,8 @@ section.testimonials {
 }
 
 /* Адаптивность */
+
+
 @media (max-width: 768px) {
   .read-more-btn {
     width: 35px;
@@ -1331,6 +1339,8 @@ section.testimonials {
     font-size: 14px;
   }
 }
+
+
 
 .testimonials .item-footer {
   position: relative;
@@ -1624,6 +1634,7 @@ contact us
 .social-square:hover {
   transform: scale(1.15);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.477);
+  color: #fff;
 }
 
 .social-square i {
@@ -2284,6 +2295,17 @@ responsive
 body {
   overflow-x: hidden;
 }
+@media (max-width: 1400px) {
+  section.our-courses ul.nacc li .left-image img,
+  section.our-team ul.nacc li .right-image img{
+    width: 70%;
+    display: flex;
+  }
+  section.our-courses ul.nacc li .right-content {
+    font-size: 15px;
+    margin-left: 380px;
+  }
+}
 
 @media (max-width: 1330px) {
   .services .owl-nav .owl-next {
@@ -2297,10 +2319,22 @@ body {
   .our-courses .owl-nav .owl-next {
     right: -30px;
   }
+  
 
   .our-courses .owl-nav .owl-prev {
     left: -25px;
+  } 
+  section.our-courses ul.nacc li .left-image img,
+  section.our-team ul.nacc li .right-image img{
+    width: 65%;
+    display: flex;
   }
+  section.our-courses ul.nacc li .right-content {
+    font-size: 15px;
+    margin-left: 350px;
+  }
+  
+  
 }
 
 @media (max-width: 1200px) {
@@ -2332,7 +2366,20 @@ body {
   .our-courses .owl-nav .owl-prev {
     left: -65px;
   }
+  section.our-courses ul.nacc li .left-image img,   /*отвечает за позиционирования картинки*/
+  section.our-team ul.nacc li .right-image img{
+    width: 60%;
+    display: flex;
+  }
+  section.our-courses ul.nacc li .right-content {   /*позиционирвания текста справа*/
+    font-size: 10px;
+    margin-left: 260px;
+  }
+  
+ 
+  
 }
+
 
 @media (max-width: 1085px) {
   .services .owl-nav .owl-next {
