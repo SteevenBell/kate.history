@@ -621,18 +621,9 @@ header
   color: #dc8cdb;
 }
 
-@media (max-width: 1200px) {
-  .header-area .main-nav .nav li {
-    padding-left: 7px;
-    padding-right: 7px;
-  }
 
-  .header-area .main-nav:before {
-    display: none;
-  }
-}
 
-@media (max-width: 767px) {
+@media (max-width: 1201px) {
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
@@ -751,7 +742,8 @@ header
   }
 }
 
-@media (min-width: 767px) {
+
+@media (min-width: 1202px) {
   .header-area .main-nav .nav {
     display: flex !important;
   }
@@ -1004,15 +996,19 @@ section.our-courses ul.nacc li .left-image {
   margin-right: 50px;
   top: 50%;
   transform: translateY(-50%);
-  width: 70%; /* Устанавливаем ширину на 90% */
+  width: 70%;
+  /* Устанавливаем ширину на 90% */
 }
 
 section.our-courses ul.nacc li .left-image img {
-  width: 50%;  /*Заставляет изображение занимать всю ширину родительского блока */
-  height: auto;  /*Сохраняет пропорции изображения */
+  width: 50%;
+  /*Заставляет изображение занимать всю ширину родительского блока */
+  height: auto;
+  /*Сохраняет пропорции изображения */
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  object-fit: cover; /* Обеспечивает, чтобы изображение заполнило блок, обрезая лишние части */
+  object-fit: cover;
+  /* Обеспечивает, чтобы изображение заполнило блок, обрезая лишние части */
 }
 
 section.our-courses ul.nacc li .left-image .price h6 {
@@ -1099,7 +1095,7 @@ section.simple-cta {
 }
 
 section.simple-cta .left-image {
-  
+
   margin-right: 45px;
 
 }
@@ -2295,12 +2291,15 @@ responsive
 body {
   overflow-x: hidden;
 }
+
 @media (max-width: 1400px) {
+
   section.our-courses ul.nacc li .left-image img,
-  section.our-team ul.nacc li .right-image img{
+  section.our-team ul.nacc li .right-image img {
     width: 70%;
     display: flex;
   }
+
   section.our-courses ul.nacc li .right-content {
     font-size: 15px;
     margin-left: 380px;
@@ -2319,22 +2318,34 @@ body {
   .our-courses .owl-nav .owl-next {
     right: -30px;
   }
-  
+
 
   .our-courses .owl-nav .owl-prev {
     left: -25px;
-  } 
+  }
+
   section.our-courses ul.nacc li .left-image img,
-  section.our-team ul.nacc li .right-image img{
+  section.our-team ul.nacc li .right-image img {
     width: 65%;
     display: flex;
   }
+
   section.our-courses ul.nacc li .right-content {
     font-size: 15px;
     margin-left: 350px;
   }
-  
-  
+}
+
+@media (max-width: 1201px) {
+  section.our-courses ul.nacc li .left-image img,
+  section.our-team ul.nacc li .right-image img {
+    display: none;
+  }
+
+  section.our-courses ul.nacc li .right-content {
+    font-size: 10px;
+    margin-left: 25px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2366,18 +2377,6 @@ body {
   .our-courses .owl-nav .owl-prev {
     left: -65px;
   }
-  section.our-courses ul.nacc li .left-image img,   /*отвечает за позиционирования картинки*/
-  section.our-team ul.nacc li .right-image img{
-    width: 60%;
-    display: flex;
-  }
-  section.our-courses ul.nacc li .right-content {   /*позиционирвания текста справа*/
-    font-size: 10px;
-    margin-left: 260px;
-  }
-  
- 
-  
 }
 
 
@@ -2496,7 +2495,8 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+
+@media (max-width: 1201px) {
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     display: none;
   }
