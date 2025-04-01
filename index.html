@@ -636,6 +636,26 @@
   </section>
 
   <!-- Scripts -->
+  <script>
+    // Улучшенный фикс для passive events
+    (function () {
+      if (typeof EventTarget !== 'undefined') {
+        const originalAdd = EventTarget.prototype.addEventListener;
+        EventTarget.prototype.addEventListener = function (type, fn, options) {
+          // Для touch-событий добавляем passive: true только если нет preventDefault
+          if (['touchstart', 'touchmove', 'wheel'].includes(type)) {
+            const isPassive = (typeof options === 'object' && options.passive) ||
+              (typeof options === 'undefined' && !fn.toString().includes('preventDefault'));
+            if (isPassive) {
+              options = Object.assign({}, options, { passive: true });
+            }
+          }
+          originalAdd.call(this, type, fn, options);
+        };
+      }
+    })();
+  </script>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
